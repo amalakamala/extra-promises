@@ -1,3 +1,22 @@
+var abilities = function(url){
+	$.ajax({
+		url: url,
+		type: 'GET',
+		dataType: 'json',
+		data: {'limit': '2'},
+	})
+	.done(function(response){	
+		//console.log(response.abilities);
+		//console.log(response.sprites);
+		var nameId = response.name;	
+
+		response.abilities.forEach(function(e){
+			//console.log(e.ability.name)
+			$("#"+nameId).append(`<span>`+ e.ability.name +` </span></div>`);
+		})
+	})
+}
+
 var callbacksAjax = function(){
 
 	$.ajax({

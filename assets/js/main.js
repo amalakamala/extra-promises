@@ -15,6 +15,33 @@ var abilities = function(url){
 			$("#"+nameId).append(`<span>`+ e.ability.name +` </span></div>`);
 		})
 	})
+	.done(function(response){
+		var nameId = response.name;
+		//console.log(response.weight);
+		$("#"+nameId).append(`<div><p><h6><i class="fa fa-bullseye" aria-hidden="true"></i> PESO </h6>`+ response.weight +`</p></div><div><span><h6><i class="fa fa-heartbeat" aria-hidden="true"></i> TIPO </h6>`);
+	})
+	.done(function(response){	
+		console.log(response.types);
+		var nameId = response.name;	
+
+		response.types.forEach(function(e){
+			//console.log(e.ability.name)
+			$("#"+nameId).append( e.type.name +` </span></div>`);
+		})
+	})	
+	.done(function(response){
+		var nameId = response.name;
+		var img = response.sprites.front_default;
+		$("#"+nameId).append('<div><img src="'+img+'"></div>');
+		
+	})	
+
+	.fail(function(){
+		console.log("Tienes un Error");	
+	})
+	.always(function() {
+		console.log("Listo");
+	});		
 }
 
 var callbacksAjax = function(){

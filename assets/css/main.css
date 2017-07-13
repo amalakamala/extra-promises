@@ -1,4 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*---------- HEADER ----------*/
+
+.navbar{
+	height: 70px;
+}
+
+.navbar-default{
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.navbar-header{
+	padding-left: 42%;
+	position: absolute;
+	bottom: 40px;	
+}
+
+.navbar-brand h1{
+	color: #BFBFBF;
+}
+
+.navbar-brand h1:hover{
+	color: #84B1FF;
+}
+
 /*---------- POKEMONES ----------*/
+h6,h3{
+	font-family: 'Righteous', cursive;
+	margin: 0;
+}
+
+h6, .el-h6{
+	color:	#2F6BFA;
+}
+
+h3{
+	color: #84B1FF;	
+}
+
 .caja{
 	background-color: #FAFAFA;
 	margin: 10px;

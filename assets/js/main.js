@@ -31,3 +31,8 @@ var callbacksAjax = function(){
 		console.log("Complete el Nombre");
 	});
 }	
+
+$(document).ready(function() {
+	callbacksAjax();	
+
+});
